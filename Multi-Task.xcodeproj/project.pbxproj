@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3FF960E11C15F9CF0008ED7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF960E01C15F9CF0008ED7B /* AppDelegate.swift */; };
-		3FF960E31C15F9CF0008ED7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF960E21C15F9CF0008ED7B /* ViewController.swift */; };
+		3FF960E31C15F9CF0008ED7B /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF960E21C15F9CF0008ED7B /* TitleViewController.swift */; };
 		3FF960E61C15F9CF0008ED7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF960E41C15F9CF0008ED7B /* Main.storyboard */; };
 		3FF960E81C15F9CF0008ED7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF960E71C15F9CF0008ED7B /* Assets.xcassets */; };
 		3FF960EB1C15F9CF0008ED7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FF960E91C15F9CF0008ED7B /* LaunchScreen.storyboard */; };
 		3FF960F61C15F9CF0008ED7B /* Multi_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF960F51C15F9CF0008ED7B /* Multi_TaskTests.swift */; };
 		3FF961011C15F9CF0008ED7B /* Multi_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF961001C15F9CF0008ED7B /* Multi_TaskUITests.swift */; };
+		3FF9610F1C160A2E0008ED7B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF9610E1C160A2E0008ED7B /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		3FF960DD1C15F9CF0008ED7B /* Multi-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multi-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF960E01C15F9CF0008ED7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FF960E21C15F9CF0008ED7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FF960E21C15F9CF0008ED7B /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		3FF960E51C15F9CF0008ED7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FF960E71C15F9CF0008ED7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FF960EA1C15F9CF0008ED7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		3FF960FC1C15F9CF0008ED7B /* Multi-TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Multi-TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF961001C15F9CF0008ED7B /* Multi_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multi_TaskUITests.swift; sourceTree = "<group>"; };
 		3FF961021C15F9CF0008ED7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FF9610E1C160A2E0008ED7B /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				3FF960E01C15F9CF0008ED7B /* AppDelegate.swift */,
-				3FF960E21C15F9CF0008ED7B /* ViewController.swift */,
+				3FF960E21C15F9CF0008ED7B /* TitleViewController.swift */,
 				3FF960E41C15F9CF0008ED7B /* Main.storyboard */,
+				3FF9610E1C160A2E0008ED7B /* GameViewController.swift */,
 				3FF960E71C15F9CF0008ED7B /* Assets.xcassets */,
 				3FF960E91C15F9CF0008ED7B /* LaunchScreen.storyboard */,
 				3FF960EC1C15F9CF0008ED7B /* Info.plist */,
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FF960E31C15F9CF0008ED7B /* ViewController.swift in Sources */,
+				3FF960E31C15F9CF0008ED7B /* TitleViewController.swift in Sources */,
+				3FF9610F1C160A2E0008ED7B /* GameViewController.swift in Sources */,
 				3FF960E11C15F9CF0008ED7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Multi-Task/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "npappas.Multi-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.BopIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -415,7 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Multi-Task/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "npappas.Multi-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = npappas.BopIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -487,6 +491,7 @@
 				3FF961071C15F9CF0008ED7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FF961081C15F9CF0008ED7B /* Build configuration list for PBXNativeTarget "Multi-TaskTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +500,7 @@
 				3FF9610A1C15F9CF0008ED7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FF9610B1C15F9CF0008ED7B /* Build configuration list for PBXNativeTarget "Multi-TaskUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +509,7 @@
 				3FF9610D1C15F9CF0008ED7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

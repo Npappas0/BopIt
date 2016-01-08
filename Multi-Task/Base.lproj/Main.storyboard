@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TitleViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TitleViewController" id="BYZ-38-t0r" customClass="TitleViewController" customModule="Multi_Task" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,198 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Bop It!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMi-6K-mCJ">
+                                <rect key="frame" x="116" y="28" width="369" height="90"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="75"/>
+                                <color key="textColor" red="0.012014678030302983" green="0.010848308786837665" blue="0.007552270949653681" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="IPn-8W-g0X">
+                                <rect key="frame" x="185" y="425" width="231" height="29"/>
+                                <color key="backgroundColor" red="0.9758720012626263" green="0.95537953696610312" blue="0.51563518921696283" alpha="1" colorSpace="calibratedRGB"/>
+                                <segments>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
+                                </segments>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REX-07-zSy">
+                                <rect key="frame" x="295" y="471" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hny-us-GRX">
+                                <rect key="frame" x="277" y="525" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.44639127316969768" green="0.9758720012626263" blue="0.5416424670672475" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.0074376578282828731" green="0.0074353809842538391" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZr-jd-pgf"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bopit" translatesAutoresizingMaskIntoConstraints="NO" id="nko-Tp-0q1">
+                                <rect key="frame" x="145" y="147" width="311" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="IjN-9G-Wvb"/>
+                                    <constraint firstAttribute="width" constant="311" id="V2o-J0-XLL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Highscore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGp-7n-Swe">
+                                <rect key="frame" x="249" y="496" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7449324334735159" green="1" blue="0.61482897113729895" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aMi-6K-mCJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Av-8z-TjA"/>
+                            <constraint firstItem="REX-07-zSy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Fql-5g-cSm"/>
+                            <constraint firstItem="XGp-7n-Swe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OvB-bq-hYQ"/>
+                            <constraint firstItem="nko-Tp-0q1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QGX-et-AXq"/>
+                            <constraint firstItem="IPn-8W-g0X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bWR-Vk-VgV"/>
+                            <constraint firstItem="hny-us-GRX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rcI-EL-Xtl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eAo-Wo-iZh"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="difficulty" destination="IPn-8W-g0X" id="mdi-2x-ozd"/>
+                        <outlet property="scoreLabel" destination="REX-07-zSy" id="Itl-0r-R4b"/>
+                        <segue destination="0NJ-2c-ckn" kind="show" identifier="startGame" animates="NO" id="Pnu-Dt-IuG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1102" y="-395"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="mCs-eP-ntZ">
+            <objects>
+                <viewController title="Game" id="0NJ-2c-ckn" customClass="GameViewController" customModule="Multi_Task" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m2v-Kz-kox"/>
+                        <viewControllerLayoutGuide type="bottom" id="NVn-nG-rnG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f3x-NC-MI8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TAP IT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKm-l3-Kbv">
+                                <rect key="frame" x="162" y="249" width="277" height="279"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="NQ4-pf-dv5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60633867689999998" blue="0.22598851850000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="jKm-l3-Kbv" firstAttribute="centerY" secondItem="f3x-NC-MI8" secondAttribute="centerY" id="aZB-Oa-QyF"/>
+                            <constraint firstItem="jKm-l3-Kbv" firstAttribute="centerX" secondItem="f3x-NC-MI8" secondAttribute="centerX" id="eu6-K4-wgF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="SKu-ri-j9x" appends="YES" id="OWp-Fy-yKI"/>
+                            <outletCollection property="gestureRecognizers" destination="2Nw-OC-cQ2" appends="YES" id="1SR-Q0-6cz"/>
+                            <outletCollection property="gestureRecognizers" destination="eBK-bn-54Y" appends="YES" id="Ln9-hT-hTY"/>
+                            <outletCollection property="gestureRecognizers" destination="RxD-JX-tPV" appends="YES" id="AXg-Bc-DF1"/>
+                            <outletCollection property="gestureRecognizers" destination="891-4c-gak" appends="YES" id="tqK-y4-nsK"/>
+                            <outletCollection property="gestureRecognizers" destination="CnC-QD-mbs" appends="YES" id="TnS-yO-c8x"/>
+                            <outletCollection property="gestureRecognizers" destination="Wab-Tw-82P" appends="YES" id="cfM-O6-AWM"/>
+                            <outletCollection property="gestureRecognizers" destination="yfG-k1-K30" appends="YES" id="cgG-hk-lzZ"/>
+                            <outletCollection property="gestureRecognizers" destination="XsG-Y4-Ycn" appends="YES" id="qJE-Es-ypq"/>
+                            <outletCollection property="gestureRecognizers" destination="9Yc-RU-bW3" appends="YES" id="GLD-Ho-H1C"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="commandLabel" destination="jKm-l3-Kbv" id="fC5-VS-eyU"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="endGame" animates="NO" id="Gf4-KQ-FQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="miC-DO-yto" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SKu-ri-j9x">
+                    <connections>
+                        <action selector="tapped:" destination="0NJ-2c-ckn" id="ne5-An-VCO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pinchGestureRecognizer id="2Nw-OC-cQ2">
+                    <connections>
+                        <action selector="pinch:" destination="0NJ-2c-ckn" id="tGQ-Lc-455"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="eBK-bn-54Y">
+                    <connections>
+                        <action selector="rotate:" destination="0NJ-2c-ckn" id="4QE-ya-NzY"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="RxD-JX-tPV">
+                    <connections>
+                        <action selector="swipe:" destination="0NJ-2c-ckn" id="Lzu-xJ-LCV"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="891-4c-gak">
+                    <connections>
+                        <action selector="longPress:" destination="0NJ-2c-ckn" id="v5h-2T-Pno"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="CnC-QD-mbs">
+                    <connections>
+                        <action selector="swipe:" destination="0NJ-2c-ckn" id="f3H-UU-MFd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="Wab-Tw-82P">
+                    <connections>
+                        <action selector="swipe:" destination="0NJ-2c-ckn" id="IQp-kI-867"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="yfG-k1-K30">
+                    <connections>
+                        <action selector="swipe:" destination="0NJ-2c-ckn" id="bNp-sJ-hZG"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTouchesRequired="2" id="XsG-Y4-Ycn">
+                    <connections>
+                        <action selector="tapped:" destination="0NJ-2c-ckn" id="tLQ-qp-5CZ"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" numberOfTouchesRequired="2" id="9Yc-RU-bW3">
+                    <connections>
+                        <action selector="longPress:" destination="0NJ-2c-ckn" id="iso-Id-O0U"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1870" y="-1021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ziu-hK-Sjt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5aY-6W-0wZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cga-dL-Dd8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Uyh-tg-QSS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gup-Ej-9dK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277" y="-395"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bopit" width="800" height="638"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Gf4-KQ-FQz"/>
+    </inferredMetricsTieBreakers>
 </document>
